@@ -1,14 +1,14 @@
 .header {
   text-align: center;
-  border: 1px solid #adbc39;
+  border: 1px solid var(--color-green);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
 }
 
 .header__title {
-  background-color: #adbc39;
-  color: #192504;
+  background-color: var(--color-green);
+  color: var(--color-darkgreen);
   padding-top: 8px;
   margin: 0;
 }
@@ -16,7 +16,7 @@
 .header__subtitle {
   display: block;
   font-size: 75%;
-  background-color: white;
-  color: #adbc39;
+  background-color: var(--color-white);
+  color: var(--color-darkgreen);
   padding: 8px;
 }

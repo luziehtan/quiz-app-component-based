@@ -1,7 +1,7 @@
 .Button {
   padding: 10px 20px;
-  background: #adbc39;
-  color: white;
+  background: var(--color-green);
+  color: var(--color-white);
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px #0006;
