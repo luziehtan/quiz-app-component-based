@@ -1,14 +1,14 @@
 .header {
   text-align: center;
-  border: 1px solid hotpink;
+  border: 1px solid #adbc39;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
 }
 
 .header__title {
-  background-color: hotpink;
-  color: white;
+  background-color: #adbc39;
+  color: #192504;
   padding-top: 8px;
   margin: 0;
 }
@@ -17,6 +17,6 @@
   display: block;
   font-size: 75%;
   background-color: white;
-  color: hotpink;
+  color: #adbc39;
   padding: 8px;
 }
