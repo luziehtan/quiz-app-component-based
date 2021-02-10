@@ -1,27 +1,45 @@
-import createElement from '../../lib/createElement'
-import Header from './components/Header/Header'
-import Card from './components/Card/Card'
-import Navigation from './components/Navigation/Navigation'
+import createElement from './lib/createElement'
+import Header from './components/Header'
+import HomePage from './components/HomePage'
+import CreatePage from './components/CreatePage'
+import Navigation from './components/Navigation'
 
-const { el: headerEl, setText: setHeaderText } = Header(
-  'Quiz App',
-  'May the best win!'
-)
+const cards = []
+
+const header = Header('Quiz App')
 
 const navigation = Navigation(onNavigate)
 
-function onNavigate(text) {
-  console.log(text)
-}
+const homePage = HomePage()
+
+const createPage = CreatePage(onSubmit)
 
 const grid = createElement(
   'div',
   { className: 'appGrid' },
-  headerEl,
-  Card('Foo bar?', 'Bar baz!'),
+  header,
+  homePage,
+  createPage,
   navigation
 )
 
-setHeaderText('Create', 'a new card')
-
 document.body.append(grid)
+
+function onSubmit(question, answer) {
+  cards.push({ question, answer })
+  homePage.setCards(cards)
+}
+
+function onNavigate(text) {
+  if (text === 'Home') {
+    homePage.show()
+    createPage.hide()
+    header.setText('Quiz App')
+  }
+
+  if (text === 'Create') {
+    homePage.hide()
+    createPage.show()
+    header.setText('Create cards')
+  }
+}

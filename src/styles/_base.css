@@ -16,7 +16,18 @@ h3 {
   line-height: 1.3;
 }
 
-input,
 button {
   font-size: 1em;
+}
+
+input {
+  width: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.app-grid {
+  position: relative;
 }

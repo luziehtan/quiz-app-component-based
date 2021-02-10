@@ -1,22 +1,5 @@
 .Header {
   text-align: center;
-  border: 1px solid var(--color-green);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  overflow: hidden;
-}
-
-.Header__title {
   background-color: var(--color-green);
   color: var(--color-darkgreen);
-  padding-top: 8px;
-  margin: 0;
-}
-
-.Header__subtitle {
-  display: block;
-  font-size: 75%;
-  background-color: var(--color-white);
-  color: var(--color-darkgreen);
-  padding: 8px;
 }
